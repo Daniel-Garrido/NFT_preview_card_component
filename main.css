@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/*creamos la paleta de colores con los que vamos a 
+ trabajar*/
+ :root{
+     
+--Very_dark_blue_Fondo: hsl(217, 54%, 11%);
+--Very_dark_blue_caja: hsl(216, 50%, 16%);
+--Very_dark_blue_texto: hsl(215, 32%, 27%);
+--White: #ffffff;
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+
+ }
+
+body {
+    background: var(--Very_dark_blue_Fondo);
+}
+
+main {
+
+    /****utilizamos flexbox **+*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4%;
+}
+/******************caja principal*******************************/
+/*aca se encuentra todo el contenido de mi pagina */
+.contenedor {
+    background: var(--Very_dark_blue_caja);
+    
+    /*agregamos un ancho y un alto */
+    width: 18rem;
+    height: auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 25px 0 18px rgba(0, 0, 0, 0.04),
+    0 30px 0 50px rgba(0, 0, 0, 0.022);
+}
+
+.contenedor img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/**************************************************************************/
+.contenedor h1{
+    height: 50px;
+    padding-top: 5%;
+    color: var(--White);
+    font-size: 24px;
+    font-family: sans-serif;
+}
+.contenedor h1:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contenedor p {
+    height: 60px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: var(--Soft-blue);
+}
+
+.datos {
+    /*utilizamos grid en esta parte para poder acomodar mejor el 
+    tamaño de los texto 
+    */
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 10% 40% 10% 40% auto;
+    justify-content: flex-start;
+}
+/**/
+.datos img {
+    width: 60%;
+}
+
+.texto1, .texto2{
+    font-weight: normal;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.texto1{
+    color: var(--Cyan);
+}
+
+.texto2{
+    color: var(--Soft-blue);
+}
+/*************************************************************************/
+/* agregamos un pie de pagina */
+/* se encuentra la imagen y su descripcion*/
+.pie-pagina {
+    border-top: 1px solid  var(--White);
+    /*utilizamos flexbox para poder centrar nuestro pie de pagina */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+/*estilo a la imagen del  footer*/
+.pie-pagina img {
+    width: 12%;
+    border: 1px solid var(--White);
+    border-radius: 100px;
+}
+
+/*estilos al parrafo */
+.pie-pagina h3 ,a {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: var(--Soft-blue);
+
+    padding-left: 10px;
+}
+.pie-pagina a {
+    text-decoration: none;
+    color: var(--White);
+}
+.pie-pagina a:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/*****************************************************************************/
+/*******Derechos de autor *****/
+.attribution {
+    font-size: 16px;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+.attribution a:hover{
+    color: var(--White);
+    transition: all 0.3s;
+}
